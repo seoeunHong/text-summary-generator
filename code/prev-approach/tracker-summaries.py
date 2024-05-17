@@ -1,6 +1,6 @@
 import pandas as pd
 
-directConversion=pd.read_csv("../01_Input/01_Methodology/Direct Conversion Factors.csv")
+directConversion=pd.read_csv("Direct Conversion Factors.csv")
 
 
 beneTiers={}
@@ -84,5 +84,5 @@ for projectType in ["Total","VF","Non-VF"]:
         summaryDfList.append(getSummaryInfo({"Category":"Beneficiary Category","Subcategory":beneCategory,"VF or Non-VF":projectType},df))
 
 summaryDf=pd.DataFrame.from_records(summaryDfList)
-summaryDf.to_csv("../02_Output/05_Summary/summaryDf.csv")
+summaryDf.to_csv("summaryDf.csv")
 summaryDf
